@@ -9,15 +9,15 @@
 // document.querySelector('.guess').value = 23;
 // console.log(document.querySelector('.guess').value);
 
-let secretNumber = Math.trunc(Math.random() * 20.1);
-let score = 20;
+let secretNumber = Math.trunc(Math.random() * 200.1);
+let score = 200;
 let highscore = 0;
 
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
   console.log(guess, typeof guess);
 
-  if (!guess || guess > 20 || guess < 1) {
+  if (!guess || guess > 200 || guess < 0) {
     document.querySelector('.message').textContent =
       'You must enter a number between 0 and 20';
   } else if (guess < secretNumber) {
